@@ -2379,11 +2379,11 @@
 		}
 		else
 		{
-			var body = arrayDorsal.join("<br>") + "<br><br>" + arrayCyclists.join("<br>");
-	    	var subject = document.getElementById('user').value;
-	    	var email = "grandesvueltasacb@hotmail.com";
-
-	    	window.location.href = 'mailto:'+email+'?subject=Equipo%20' + document.title + '%20-%20Usuario%20'+subject+ '%20-%20Division%20' + document.getElementById('divisions').selectedIndex +'&body='+body;
+			var body = '<br><br>' + arrayDorsal.join('<br>') + '<br><br>' + arrayCyclists.join('<br>');
+	    	var subject = 'Equipo:%20' + document.title + '%20-%20Usuario:%20'+ document.getElementById('user').value + '%20-%20Division:%20' + document.getElementById('divisions').selectedIndex;
+	    	var email = "grandesvueltasacb@hotmail.com"; 
+			
+	    	window.location.href = 'mailto:'+email+'?subject='+subject'+'&body='+subject+body;
 		}
     }
 
