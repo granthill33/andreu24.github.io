@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<title>Tourmaker 2020</title>
+	<title>Tour 2020</title>
 	<style>
 	  	.submitButtons{
 	  		font-size:large;
@@ -2676,11 +2676,11 @@
 		}
 		else
 		{
-			var body = arrayDorsal.join("%0D%0A") + "%0D%0A%0D%0A" + arrayCyclists.join("%0D%0A");
+			var body = arrayDorsal.join("<br>") + "<br><br>" + arrayCyclists.join("<br>");
 	    	var subject = document.getElementById('user').value;
 	    	var email = "grandesvueltasacb@hotmail.com";
 
-	    	window.location.href = 'mailto:'+email+'?subject=Equipo%20Usuario:%20'+subject+'&body='+body;
+	    	window.location.href = 'mailto:'+email+'?subject=Equipo%20' + document.title + '%20Usuario%20'+subject+ '%20Division%20' + document.getElementById('divisions').selectedIndex +'&body='+body;
 		}
     }
 
