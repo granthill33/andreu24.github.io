@@ -2863,6 +2863,8 @@
 		
 		var arrayUserList = document.getElementById('userList').options;
 		
+		var bnew_user = true;
+		
 		for (var i = 0; i < arrayUserList.length; i++)
 		{
 
@@ -2878,10 +2880,19 @@
 					smensajeDivision = smensajeDivision + "<br>" + "Debes mandar también un equipo de la división superior";
 				}
 				
+				bnew_user = false;
 				break;
 			}
 		}
 
+		if(bnew_user)
+		{
+			smensajeDivision = "Hola " + document.getElementById('user').value + "! <br>Si eres nuevo en el juego, tu división es 5ª" + "<br>";
+				
+			document.getElementById('divisions').selectedIndex = 5;
+			document.getElementById('divisions').onchange();
+		}
+		
 		document.getElementById('infoDivision').innerHTML = smensajeDivision
 	}
 	
